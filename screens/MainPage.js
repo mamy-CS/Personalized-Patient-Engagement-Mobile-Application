@@ -49,7 +49,7 @@ class MainPage extends Component  {
         </Menu>
       </MenuProvider> */}
          <View style={{flexDirection: 'row'}} >
-      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'PrePostScreen'});}}>
+      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{this.props.navigation.navigate({routeName: 'PrePostScreen'});}}>
      <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
      <Icon
     name='plus'
@@ -59,7 +59,7 @@ class MainPage extends Component  {
         <Text  style={styles.textButton}>Pre-op/Post-op Care</Text>
      </View>
  </TouchableOpacity>
- <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'SurveyScreen'});}}>
+ <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{this.props.navigation.navigate({routeName: 'SurveyScreen'});}}>
      <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
      <Icon
     name='tasks'
@@ -71,7 +71,7 @@ class MainPage extends Component  {
  </TouchableOpacity>
 </View>
 <View style={{flexDirection: 'row'}} >
-      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'EducationScreen'});}}>
+      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{this.props.navigation.navigate({routeName: 'EducationScreen'});}}>
      <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
      <Icon
     name='heart'
@@ -81,7 +81,7 @@ class MainPage extends Component  {
          <Text  style={styles.textButton}>Improve My Health</Text>
      </View>
  </TouchableOpacity>
- <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'ProgressScreen'});}}>
+ <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{this.props.navigation.navigate({routeName: 'ProgressScreen'});}}>
      <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
      <Icon
     name='line-chart'
