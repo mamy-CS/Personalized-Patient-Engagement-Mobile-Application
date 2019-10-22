@@ -5,16 +5,18 @@ import Survey from '../screens/Survey';
 import MainPage from '../screens/MainPage';
 import Education from '../screens/Education';
 import Progress from '../screens/Progress';
-
+import Login from '../screens/Login';
+import Signup from '../screens/Signup';
 
 const Navigator = createStackNavigator(
   {
-    MainScreen:  MainPage,
+    LoginScreen: Login,
+    SignupScreen: Signup,
     SurveyScreen: Survey,
+    MainScreen:  MainPage,
     PrePostScreen: PrePost,
     EducationScreen:Education,
     ProgressScreen: Progress
-
   }
 );
 

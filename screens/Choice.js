@@ -3,7 +3,7 @@ import React from 'react'
 import {StyleSheet, View, Text, Button} from 'react-native';
 import { CheckBox } from 'react-native-elements'
 
-const PrePost = props => {
+const Choice = props => {
   return (
     <View styles={styles.screen}>
       <Text>Pre-Op Checklist</Text>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default PrePost
+export default Choice

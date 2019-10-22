@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, AsyncStorage, Keyboard } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity
+} from 'react-native';
 
 import Form from '../components/Form';
 
-export default class Login extends Component {
+export default class Signup extends Component {
 
-    constructor (props) {
-        super(props);
-    }
-    signup = () => {
-        this.props.navigation.navigate({routeName: 'SignupScreen'})
+    goBack() {
+        Actions.pop()
     }
 
-    render () {
+    render() {
         return(
             <View style={styles.container}>
                 <Text>{'\n'}</Text>
                 <Text>{'\n'}</Text>
-                <Form type="Login"/>
+                <Form type="Signup"/>
                 <View style={styles.signupTextCont}> 
-                    <Text style={styles.signupText}>Dont have an account yet? </Text>
-                    <TouchableOpacity onPress={this.signup}><Text style={styles.signupButton}>Signup</Text></TouchableOpacity>
+                    <Text style={styles.signupText}>Already have an account? </Text>
+                    <TouchableOpacity onPress={this.goBack}><Text style={styles.signupButton}>Sign in</Text></TouchableOpacity>
                 </View>
             </View>
         )
@@ -32,23 +34,23 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: 'white',
+      backgroundColor: 'white'
     },
     signupTextCont: {
       flexGrow: 1,
       justifyContent: 'center',
       alignItems: 'flex-end',
       paddingVertical: 16,
-      flexDirection: 'row',
+      flexDirection: 'row'
     },
     signupText: {
       color: '#12799f', 
-      fontSize:16,
+      fontSize:16
     },
     signupButton: {
         color: '#12799f',
         fontSize:16,
-        fontWeight: '500',
+        fontWeight: '500'
     }
 });
 
