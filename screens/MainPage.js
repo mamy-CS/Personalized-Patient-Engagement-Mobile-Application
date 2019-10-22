@@ -1,15 +1,21 @@
 
-import React from 'react';
-import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import React, {Component} from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Header } from 'react-native-elements';
+import { Left, Right} from 'native-base';
 
-import {StyleSheet, View, Text, Button} from 'react-native';
+import {StyleSheet, View, Text, Button,TouchableOpacity} from 'react-native';
 import { Menu, MenuProvider, MenuOptions, MenuOption, MenuTrigger} from "react-native-popup-menu";
 
-const MainPage =  props => {
+class MainPage extends Component  {
+  render() {
   return (
     <View style = {styles.screen}>
-      <MenuProvider style={{ backgroundColor:'red' }}>
+
+
+      <Text style={{fontSize: 35, margin:40}}>HealthAloha</Text>
+      <Text style={{fontSize: 35}}>Welcome to HealthAloha!</Text>
+      {/* <MenuProvider style={{ backgroundColor:'red' }}>
         <Menu>
 
           <MenuTrigger  >
@@ -41,28 +47,76 @@ const MainPage =  props => {
           </MenuOptions>
 
         </Menu>
-      </MenuProvider>
+      </MenuProvider> */}
+         <View style={{flexDirection: 'row'}} >
+      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'PrePostScreen'});}}>
+     <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
+     <Icon
+    name='plus'
+    size={70}
+    color='#3b5998'
+    style={styles.iconButton}/>
+        <Text  style={styles.textButton}>Pre-op/Post-op Care</Text>
+     </View>
+ </TouchableOpacity>
+ <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'SurveyScreen'});}}>
+     <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
+     <Icon
+    name='tasks'
+    size={50}
+    color='#3b5998'
+    style={styles.iconButton}/>
+         <Text  style={styles.textButton}>Survey</Text>
+     </View>
+ </TouchableOpacity>
+</View>
+<View style={{flexDirection: 'row'}} >
+      <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'EducationScreen'});}}>
+     <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
+     <Icon
+    name='heart'
+    size={50}
+    color='#3b5998'
+    style={styles.iconButton}/>
+         <Text  style={styles.textButton}>Improve My Health</Text>
+     </View>
+ </TouchableOpacity>
+ <TouchableOpacity style={{flexDirection: 'row'}} onPress={()=>{props.navigation.navigate({routeName: 'ProgressScreen'});}}>
+     <View style={{width:200, height: 200, backgroundColor: 'powderblue'}}>
+     <Icon
+    name='line-chart'
+    size={50}
+    color='#3b5998'
+    style={styles.iconButton}/>
+         <Text  style={styles.textButton}>How Am I Doing</Text>
+     </View>
+ </TouchableOpacity>
+</View>
 
-      <Text style={{fontSize: 35, margin:80, backgroundColor: 'powderblue'}}>HealthAloha</Text>
-      <Text style={{fontSize: 35}}>Welcome to HealthAloha!</Text>
-      <View style={{flexDirection: 'row', margin:40}}>
-        <View style={{width: 150, height: 150, backgroundColor: 'powderblue'}}>
+      {/* <View style={{flexDirection: 'row'}} >
+        <View style={{width:150, height: 150, backgroundColor: 'powderblue'}}>
           <Button title="Pre-op/Post-op Care"
             color='#3498db'
             style={{height:80,backgroundColor:'#1e90ff'}}
             onPress = {() => {
               props.navigation.navigate({routeName: 'PrePostScreen'});
             }}/>
+             <Icon
+    name='linechart'
+    size={50}
+    color='#3b5998'
+    style={{height:45,width:25,marginLeft:60}}/>
         </View>
-        <View style={{width: 150, height: 150, backgroundColor: 'skyblue'}} >
-          <Button title="Improve My Health"
-            color='#1abc9c'
-            style={styles.buttonContainer}
-            onPress = {() => {
+
+
+        <View  onPress = {() => {
               props.navigation.navigate({routeName: 'EducationScreen'});
-            }}/>
+            }} style={{width: 150, height: 150, backgroundColor: 'skyblue'}} >
+           <Icon name='menu' size={40} color='#3b5998'style={{height:45,width:25}}/>
+  <Text style={styles.buttonText}>Improve My Health</Text>
           </View>
-      </View>
+      </View> */}
+{/*
 
       <View style={{flexDirection: 'row'}}>
         <View style={{width: 150, height: 150, backgroundColor: 'blue'}}>
@@ -83,10 +137,10 @@ const MainPage =  props => {
             }}
           />
         </View>
-      </View>
+      </View> */}
     </View>
-  );
-};
+  );}
+}
 
 const styles = StyleSheet.create({
   screen: {
@@ -96,7 +150,17 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 100
+  },
+
+  iconButton: {
+    height:75,width:75,marginLeft:65, marginTop:30
+
+  },
+  textButton: {
+    fontSize:25,
+
+    textAlign: 'center'
   }
-})
+});
 
 export default MainPage;

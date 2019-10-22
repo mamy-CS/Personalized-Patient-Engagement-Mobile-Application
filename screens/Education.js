@@ -7,7 +7,7 @@ import {StyleSheet, View, Text} from 'react-native';
 const Education =  props => {
   return (
     <View style = {styles.screen}>
-      <Text>The survey screen!</Text>
+      <Text>The education screen!</Text>
 
     </View>
   );

@@ -14,7 +14,7 @@ export default class Login extends Component {
                 <Text>{'\n'}</Text>
                 <Text>{'\n'}</Text>
                 <Form type="Login"/>
-                <View style={styles.signupTextCont}> 
+                <View style={styles.signupTextCont}>
                     <Text style={styles.signupText}>Dont have an account yet? </Text>
                     <TouchableOpacity onPress={this.signup}><Text style={styles.signupButton}>Signup</Text></TouchableOpacity>
                 </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     signupText: {
-        color: '#12799f', 
+        color: '#12799f',
         fontSize:16,
     },
     signupButton: {
