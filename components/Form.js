@@ -12,6 +12,10 @@ export default class Form extends Component {
         }
     }
 
+    login = () => {
+        this.props.navigation.navigate({routeName: 'MainScreen'})
+    }
+
     saveData =async()=>{
         const {email,password} = this.state;
 

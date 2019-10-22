@@ -5,13 +5,9 @@ import Form from '../components/Form';
 
 export default class Login extends Component {
 
-    constructor (props) {
-        super(props);
-    }
     signup = () => {
         this.props.navigation.navigate({routeName: 'SignupScreen'})
     }
-
     render () {
         return(
             <View style={styles.container}>
@@ -29,21 +25,21 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'white',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
     },
     signupTextCont: {
-      flexGrow: 1,
-      justifyContent: 'center',
-      alignItems: 'flex-end',
-      paddingVertical: 16,
-      flexDirection: 'row',
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        paddingVertical: 16,
+        flexDirection: 'row',
     },
     signupText: {
-      color: '#12799f', 
-      fontSize:16,
+        color: '#12799f', 
+        fontSize:16,
     },
     signupButton: {
         color: '#12799f',
